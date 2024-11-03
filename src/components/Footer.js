@@ -5,7 +5,7 @@ import './Footer.css';
 function Footer() {
   return (
     <footer className="footer">
-      &copy; {new Date().getFullYear()} Il Tuo Nome
+      &copy; {new Date().getFullYear()} Salvatore Sipala
     </footer>
   );
 }

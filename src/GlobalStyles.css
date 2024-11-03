@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+    font-family: 'Space Mono', monospace;
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+}
+
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizelegibility;
+    letter-spacing: -0.25px;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+strong {
+    color: #292929;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Impostazioni generali della lista puntata e numerata */
+ul, ol {
+    list-style-type: none;
+    /* Rimuove la numerazione predefinita */
+    padding: 0;
+    margin: 0;
+}
+
+/* Stile specifico per le liste ordinate */
+ol {
+    padding-left: 50px;
+    /* Spazio a sinistra per allineare i puntatori */
+}
+
+/* Stile per gli elementi della lista */
+li {
+    color: #4F4F4F;
+    padding-left: 30px;
+    /* Spazio tra il cerchio e il testo */
+    margin-top: 24px;
+    position: relative;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+/* Cerchio puntatore per ciascun elemento della lista */
+li::before {
+    content: '';
+    display: block;
+    height: 12px;
+    /* Dimensioni del puntatore */
+    width: 12px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    /* Posiziona il cerchio a sinistra del testo */
+    transform: translateY(-50%);
+}
+
+/* Stile per il contenitore centrale della lista */
+.list-container {
+    display: flex;
+    align-items: center;
+    /* Centra verticalmente */
+    justify-content: center;
+    /* Centra orizzontalmente */
+    min-height: auto;
+    /* Rende il contenitore alto quanto la viewport */
+    text-align: left;
+    /* Allinea il testo a sinistra */
+}
+
+/* Colori alternati per il puntatore della lista */
+ol.alternating-colors li:nth-child(odd)::before {
+    border-color: #0BAD02;
+}
+
+ol.alternating-colors li:nth-child(even)::before {
+    border-color: #2378D5;
+}
